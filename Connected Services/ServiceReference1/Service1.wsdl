@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51138/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51138/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51138/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfAuto" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_TestDatabaseConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestDatabaseConnection" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TestDatabaseConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestDatabaseConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_saveAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveAuto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_saveAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_seurcar_InputMessage">
+    <wsdl:part name="parameters" element="tns:seurcar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_seurcar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:seurcarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_edellcar_InputMessage">
+    <wsdl:part name="parameters" element="tns:edellcar" />
+  </wsdl:message>
+  <wsdl:message name="IService1_edellcar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:edellcarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllAutoMakers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllAutoMakers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllAutoMakers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllAutoMakersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAutoModels_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAutoModels" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAutoModels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAutoModelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFuel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuel" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetFuel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFuelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColorResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="TestDatabaseConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TestDatabaseConnection" message="tns:IService1_TestDatabaseConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TestDatabaseConnectionResponse" message="tns:IService1_TestDatabaseConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/saveAuto" message="tns:IService1_saveAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/saveAutoResponse" message="tns:IService1_saveAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="seurcar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/seurcar" message="tns:IService1_seurcar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/seurcarResponse" message="tns:IService1_seurcar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="edellcar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/edellcar" message="tns:IService1_edellcar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/edellcarResponse" message="tns:IService1_edellcar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllAutoMakers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllAutoMakers" message="tns:IService1_getAllAutoMakers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllAutoMakersResponse" message="tns:IService1_getAllAutoMakers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAutoModels">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAutoModels" message="tns:IService1_getAutoModels_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAutoModelsResponse" message="tns:IService1_getAutoModels_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFuel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetFuel" message="tns:IService1_GetFuel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetFuelResponse" message="tns:IService1_GetFuel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetColor" message="tns:IService1_GetColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetColorResponse" message="tns:IService1_GetColor_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestDatabaseConnection">
+      <soap:operation soapAction="http://tempuri.org/IService1/TestDatabaseConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveAuto">
+      <soap:operation soapAction="http://tempuri.org/IService1/saveAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seurcar">
+      <soap:operation soapAction="http://tempuri.org/IService1/seurcar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="edellcar">
+      <soap:operation soapAction="http://tempuri.org/IService1/edellcar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllAutoMakers">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllAutoMakers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAutoModels">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAutoModels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFuel">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetFuel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetColor">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:51138/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
